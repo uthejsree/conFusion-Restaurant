@@ -1,0 +1,84 @@
+
+    <div class="container" ng-controller="IndexController">
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Our Lipsmacking Culinary Creations</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+                <div ng-if="!showDish">
+                    <h3>{{message}}</h3>
+                </div> 
+                <div class="media" ng-if="showDish">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                        <img class="media-object img-thumbnail" ng-src={{culinary.image}} alt="Uthappizza">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{culinary.name}} <span class="label label-danger">{{culinary.label}}</span> <span class="badge">{{culinary.price}}</span></h2>
+                        <p>
+                            {{culinary.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+                <h3 align=center>This Month's Promotions</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <div ng-if="!showPromotion">
+                    <h3>{{message2}}</h3>
+                </div>
+                <div class="media" ng-if="showPromotion">
+                    <div class="media-body">
+                        <h2 class="media-heading">
+                            {{promotion.name}} <span class="label label-danger">{{promotion.label}}</span>
+                            <span class="badge">{{promotion.price}}</span>
+                        </h2>
+                        <p>
+                            {{promotion.description}}
+                        </p>
+                    </div>
+                    <div class="media-right">
+                        <a href="#">
+                            <img class="media-object img-thumbnail" ng-src={{promotion.image}} alt="Buffet">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Meet our Culinary Specialists</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+                <div ng-if="!showExecutive">
+                    <h3>{{message3}}</h3>
+                </div>
+                <div class="media" ng-if="showExecutive">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object img-thumbnail" ng-src={{executive.image}} alt="Alberto Somayya">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{executive.name}}</h2>
+                        <h4>{{executive.designation}}</h4>
+                        <p>
+                            {{executive.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
